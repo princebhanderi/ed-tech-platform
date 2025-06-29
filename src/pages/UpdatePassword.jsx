@@ -2,15 +2,16 @@ import { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import { BiArrowBack } from "react-icons/bi"
 import { useDispatch, useSelector } from "react-redux"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 
 import { resetPassword } from "../services/operations/authAPI"
 
 function UpdatePassword() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const location = useLocation()
   const { loading } = useSelector((state) => state.auth)
+  const { token } = useParams()
+
   const [formData, setFormData] = useState({
     password: "",
     confirmPassword: "",
@@ -30,7 +31,6 @@ function UpdatePassword() {
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
-    const token = location.pathname.split("/").at(-1)
     dispatch(resetPassword(password, confirmPassword, token, navigate))
   }
 
@@ -44,7 +44,7 @@ function UpdatePassword() {
             Choose new password
           </h1>
           <p className="my-4 text-[1.125rem] leading-[1.625rem] text-richblack-100">
-            Almost done. Enter your new password and youre all set.
+            Almost done. Enter your new password and you’re all set.
           </p>
           <form onSubmit={handleOnSubmit}>
             <label className="relative">

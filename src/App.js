@@ -87,14 +87,15 @@ function App() {
           }
         />  
 
-    <Route
-          path="update-password/:id"
-          element={
-            // <OpenRoute>
-              <UpdatePassword />
-            // {/* </OpenRoute> */}
-          }
-        />  
+<Route
+  path="update-password/:token"
+  element={
+    <OpenRoute>
+      <UpdatePassword />
+    </OpenRoute>
+  }
+/>
+
 
     <Route
           path="/about"
