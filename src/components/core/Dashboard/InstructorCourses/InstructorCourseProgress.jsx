@@ -30,7 +30,7 @@ export default function InstructorCourseProgress() {
       setError(null);
       try {
         const res = await axios.post(
-          'http://localhost:4000/api/v1/course/getAllStudentsProgressForCourse',
+          'https://ed-tech-platform-backend-gho9.onrender.com/api/v1/course/getAllStudentsProgressForCourse',
           { courseId },
           { headers: { Authorization: `Bearer ${token}` } }
         );
