@@ -1,0 +1,80 @@
+import { ACCOUNT_TYPE } from "../utils/constants";
+export const sidebarLinks = [
+  {
+    id: 1,
+    name: "My Profile",
+    path: "/dashboard/my-profile",
+    icon: "VscAccount",
+  },
+  {
+    id: 2,
+    name: "Dashboard",
+    path: "/dashboard/instructor",
+    type: ACCOUNT_TYPE.INSTRUCTOR,
+    icon: "VscDashboard",
+  },
+  {
+    id: 3,
+    name: "My Courses",
+    path: "/dashboard/my-courses",
+    type: ACCOUNT_TYPE.INSTRUCTOR,
+    icon: "VscVm",
+  },
+  {
+    id: 4,
+    name: "Add Course",
+    path: "/dashboard/add-course",
+    type: ACCOUNT_TYPE.INSTRUCTOR,
+    icon: "VscAdd",
+  },
+  {
+    id: 5,
+    name: "Enrolled Courses",
+    path: "/dashboard/enrolled-courses",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "VscMortarBoard",
+  },
+  {
+    id: 6,
+    name: "Your Cart",
+    path: "/dashboard/cart",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "VscHistory",
+  },
+  // Admin Links
+  {
+    id: 7,
+    name: "Admin Dashboard",
+    path: "/dashboard/admin",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscShield",
+  },
+  {
+    id: 8,
+    name: "Manage Users",
+    path: "/dashboard/admin/users",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscOrganization",
+  },
+  {
+    id: 9,
+    name: "Manage Courses",
+    path: "/dashboard/admin/courses",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscBook",
+  },
+  {
+    id: 10,
+    name: "Manage Categories",
+    path: "/dashboard/admin/categories",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscTag",
+  },
+  {
+    id: 11,
+    name: "Platform Stats",
+    path: "/dashboard/admin/stats",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscGraph",
+  },
+];
